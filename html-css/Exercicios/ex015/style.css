@@ -1,0 +1,18 @@
+
+        body
+        {background-color: lightpink;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        h1{
+            color: darkgreen;
+            text-align: center;
+        }
+        h2 {
+            color: darkolivegreen;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    

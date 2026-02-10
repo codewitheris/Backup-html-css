@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Timer</title>
+
+  <link rel="stylesheet" href="pomo.css">
+</head>
+
+<body>
+  <div class="pomodoro">
+    <h2 style="color: antiquewhite; font-family: Gravelo;">Pomodoro</h2>
+    <div id="timer" style="color: antiquewhite;">30:00</div>
+
+    <button class="start" onclick="startTimer()">Iniciar</button>
+    <button class="pause" onclick="pauseTimer()">Pausar</button>
+    <button class="reset" onclick="resetTimer()">Resetar</button>
+  </div>
+
+  <script style=" font-family: Arial, Helvetica, sans-serif;">
+       let time = 30 * 60; // 25 minutos
+    let interval = null;
+
+    function updateTimer() {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+
+      document.getElementById("timer").innerText =
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+      if (interval) return;
+
+      interval = setInterval(() => {
+        if (time > 0) {
+          time--;
+          updateTimer();
+        } else {
+          clearInterval(interval);
+          interval = null;
+          alert("Tempo finalizado! 🍅");
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      clearInterval(interval);
+      interval = null;
+    }
+
+    function resetTimer() {
+      pauseTimer();
+      time = 30 * 60;
+      updateTimer();
+    }
+
+  </script>
+</body>
+</html>

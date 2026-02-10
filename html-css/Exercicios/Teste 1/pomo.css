@@ -1,0 +1,40 @@
+@font-face{
+font-family: Gravelo;
+src: url(fonts/Gravelo\ DEMO\ VERSION.otf) format(opentype), url(fonts/Gravelo\ DEMO\ VERSION.ttf) format(truetype);
+font-weight: normal;
+font-style: normal;
+} 
+    body {
+      font-family: Arial, sans-serif;
+      background: #F6F7EF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .pomodoro {
+      background: #8D6AC6;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(46, 46, 46, 0.1);
+    }
+
+    #timer {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .start { background: #647FC6; color: white; }
+    .pause { background: #F2E291; color: white; }
+    .reset { background: #FBAB38; color: white; }
